@@ -1,7 +1,6 @@
-# setup-vpc
-## Provision AWS VPC using Terraform
+# Provision AWS VPC using Terraform
 
-* VPC "Remote" Module
+## VPC "Remote" Module
 
 This Terraform module provisions an AWS VPC. A new VPC is created, creates and assigns a number of specification to the VPC including:
 * Enables DNS services for the VPC
