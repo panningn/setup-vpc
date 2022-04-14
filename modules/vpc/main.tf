@@ -26,13 +26,13 @@ resource "aws_subnet" "public_subnet" {
   cidr_block              = var.public_cidr[count.index]
   availability_zone       = var.az[count.index]
   map_public_ip_on_launch = true
-  tags                    = { Name = "SN-PUB-${count.index}" }
+  tags                    = { Name = "SN-PUB${var.name}" }
 }
 
 resource "aws_subnet" "private_subnet" {
   vpc_id            = aws_vpc.new_vpc.id
   count             = length(var.private_cidr)
-  cidr_block        = var.private_cidr[count.index]
-  availability_zone = var.az[count.index]
-  tags              = { Name = "SN-PRIV-${count.index}" }
+  cidr_block        = var.private_cidr
+  availability_zone = var.az
+  tags              = { Name = "SN-PRIV${var.name}" }
 }
