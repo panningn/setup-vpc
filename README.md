@@ -2,7 +2,7 @@
 
 ## VPC "Remote" Module
 
-This Terraform module provisions an AWS VPC. A new VPC is created, creates and assigns a number of specification to the VPC including:
+This Terraform module provisions an AWS VPC. A new VPC is created, creates and assigns a number of specifications to the VPC including:
 * Enables DNS services for the VPC
 * Creates the CIDR block that will be assigned for the VPC
 * Creates a Public Route Table and assigns the IGW to the RT
